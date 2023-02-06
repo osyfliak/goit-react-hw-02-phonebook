@@ -1,4 +1,4 @@
-import { Input, Label } from './ContactFiltr.styled';
+import { Input, Label } from '../Style.styled';
 import PropTypes from 'prop-types';
 
 const ContactFiltr = ({ onChange, name }) => {

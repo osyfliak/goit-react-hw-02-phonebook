@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
-import { Form, Label, Input, Button } from './AddContactForm.styled';
+import { Form, Label, Input, Button, Title } from '../Style.styled';
 
 const INITIAL_STATE = { name: '', number: '' };
 
@@ -24,7 +24,7 @@ class AddContactForm extends Component {
     const { name, number } = this.state;
     return (
       <>
-        <h2>Phonebook</h2>
+        <Title>Phonebook</Title>
         <Form onSubmit={this.handleSubmitForm}>
           <Label>Name</Label>
           <Input
@@ -57,7 +57,7 @@ class AddContactForm extends Component {
 
 AddContactForm.propTypes = {
   name: PropTypes.func.isRequired,
-  number: PropTypes.number.isRequired
+  number: PropTypes.number.isRequired,
 };
 
 export default AddContactForm;

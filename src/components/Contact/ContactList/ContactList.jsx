@@ -1,9 +1,9 @@
-import { Button } from './ContactList.styled';
+import { Button, List } from '../Style.styled';
 import PropTypes from 'prop-types';
 
 const ContactList = ({ contactList, onDeleteContact }) => {
   return (
-    <ul>
+    <List>
       {contactList.map(item => (
         <li key={item.id}>
           {item.name}: {item.number}
@@ -12,7 +12,7 @@ const ContactList = ({ contactList, onDeleteContact }) => {
           </Button>
         </li>
       ))}
-    </ul>
+    </List>
   );
 };
 
